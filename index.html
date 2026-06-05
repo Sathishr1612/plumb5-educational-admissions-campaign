@@ -48,9 +48,9 @@
       <!-- Button Right -->
       <div id="header-cta-container">
         <button id="header-cta-button" data-scroll-to="admission-consultation-form"
-          class="btn rounded-pill text-white btn-primary-grow d-flex align-items-center gap-2"
-          style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); border: none;">
-          <span>Book Consultation</span>
+          class="btn rounded-pill text-white btn-primary-grow d-flex align-items-center justify-content-center"
+          style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); border: none; gap: 0.5rem; padding-left: 1rem; padding-right: 1rem;">
+          <span class="d-none d-sm-inline">Book Consultation</span>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
@@ -73,12 +73,12 @@
       <div class="row align-items-center g-5">
 
         <!-- Left Content Frame -->
-        <div id="hero-left-content" class="col-12 col-lg-6 space-y-4" style="padding-right: 2rem;">
+        <div id="hero-left-content" class="col-12 col-lg-6 space-y-4 pe-lg-5">
 
           <!-- Premium Qualification Strip Tag -->
-          <div id="qualification-strip-top" class="d-inline-flex align-items-center gap-2 px-3 py-2 border border-white rounded-pill shadow-sm mb-4" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(240,249,255,0.8)); backdrop-filter: blur(10px);">
-            <span class="glow-dot"></span>
-            <span class="text-uppercase fw-bold text-primary-base" style="font-size: 10px; letter-spacing: 0.05em;">
+          <div id="qualification-strip-top" class="d-inline-flex align-items-center gap-2 px-3 py-2 border border-white rounded-pill shadow-sm mb-4 flex-wrap justify-content-center" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(240,249,255,0.8)); backdrop-filter: blur(10px); max-width: 100%;">
+            <span class="glow-dot flex-shrink-0"></span>
+            <span class="text-uppercase fw-bold text-primary-base text-center" style="font-size: 10px; letter-spacing: 0.05em;">
               Schools • Colleges • Universities • EdTech
             </span>
           </div>
@@ -89,14 +89,14 @@
               style="font-family: var(--font-heading); font-weight: 850; letter-spacing: -0.02em;">
               Increase Student Enrolments with <br/><span class="text-primary-base" style="background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intelligent Admission Automation</span>
             </h1>
-            <p id="hero-sub-title" class="lead text-slate-600 fw-normal" style="font-size: 19px; line-height: 1.7; max-width: 90%;">
+            <p id="hero-sub-title" class="lead text-slate-600 fw-normal" style="font-size: 19px; line-height: 1.7; max-width: 100%;">
               Capture, nurture, and convert admission enquiries faster using automated engagement workflows and
               real-time lead tracking designed for educational institutions.
             </p>
           </div>
 
           <!-- Lead Form CTA anchor -->
-          <div id="hero-cta-action" class="d-flex align-items-center gap-4 flex-wrap mb-5">
+          <div id="hero-cta-action" class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap mb-5">
             <button id="hero-cta-button" data-scroll-to="admission-consultation-form"
               class="btn rounded-pill py-3 px-4 text-white fw-bold d-flex align-items-center gap-2"
               style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); box-shadow: 0 10px 25px rgba(29, 78, 216, 0.3); border: none; transition: transform 0.3s ease, box-shadow 0.3s ease;"
@@ -127,19 +127,19 @@
 
           <!-- Subtle Mini Stat Strip -->
           <div id="hero-status-strip" class="row border-top border-slate-200 mt-5 pt-4 g-4 text-start">
-            <div class="col-4 position-relative">
+            <div class="col-12 col-sm-4 position-relative">
               <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">98.4%</div>
               <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
                 Response Speed</div>
-              <div class="position-absolute top-50 end-0 translate-middle-y" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
             </div>
-            <div class="col-4 position-relative">
+            <div class="col-12 col-sm-4 position-relative">
               <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Instant</div>
               <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
                 WhatsApp Nurture</div>
-              <div class="position-absolute top-50 end-0 translate-middle-y" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-4">
               <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Unified</div>
               <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">Ad
                 Conversion</div>
