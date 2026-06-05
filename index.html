@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plumb5 Educational Admissions Campaign</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- --- DYNAMIC SYSTEM TICKER (PORTAL TIME) --- -->
+  <div id="campaign-ticker-bar" class="py-2.5 px-4 text-white">
+    <div class="container-xl d-flex align-items-center justify-content-between flex-wrap gap-2 text-uppercase">
+      <div class="d-flex align-items-center gap-2">
+        <span class="glow-dot"></span>
+        <span class="font-monospace text-slate-300">Institutional Admissions Campaign Live</span>
+      </div>
+      <div class="d-none d-sm-flex align-items-center gap-2 font-monospace">
+        <svg class="text-warning" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-slate-200">Clock (UTC): <span id="utc-clock-tracker">2026-06-05 05:32:50 UTC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- APP HEADER --- -->
+  <header id="main-app-header" class="fixed-top bg-white d-flex align-items-center z-50">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <!-- Logo Wordmark -->
+      <div id="header-logo-container" class="d-flex align-items-center gap-3">
+        <div class="header-logo-wrapper d-flex align-items-center">
+          <img src="assets/images/brand/logo.png" alt="Plumb5 Education Engine" class="img-fluid"
+            style="height: 48px; width: auto;">
+        </div>
+
+      </div>
+
+      <!-- Button Right -->
+      <div id="header-cta-container">
+        <button id="header-cta-button" data-scroll-to="admission-consultation-form"
+          class="btn rounded-pill text-white btn-primary-grow d-flex align-items-center gap-2"
+          style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); border: none;">
+          <span>Book Consultation</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION (FULL SCREEN COOPED VIEWPORT) --- -->
+  <section id="hero-section" class="position-relative overflow-hidden d-flex align-items-center">
+
+    <!-- Premium Tech Dot Grid Background -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 hero-bg-pattern pointer-events-none z-0"></div>
+
+    <!-- Backing organic shapes inside design guidelines -->
+    <div class="position-absolute pointer-events-none z-0 organic-shape-1"></div>
+    <div class="position-absolute pointer-events-none z-0 organic-shape-2"></div>
+
+    <div class="container-xl position-relative z-10" style="padding-top: 100px; padding-bottom: 80px;">
+      <div class="row align-items-center g-5">
+
+        <!-- Left Content Frame -->
+        <div id="hero-left-content" class="col-12 col-lg-6 space-y-4" style="padding-right: 2rem;">
+
+          <!-- Premium Qualification Strip Tag -->
+          <div id="qualification-strip-top" class="d-inline-flex align-items-center gap-2 px-3 py-2 border border-white rounded-pill shadow-sm mb-4" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(240,249,255,0.8)); backdrop-filter: blur(10px);">
+            <span class="glow-dot"></span>
+            <span class="text-uppercase fw-bold text-primary-base" style="font-size: 10px; letter-spacing: 0.05em;">
+              Schools • Colleges • Universities • EdTech
+            </span>
+          </div>
+
+          <!-- Content Area -->
+          <div class="mb-5">
+            <h1 id="hero-main-title" class="display-4 fw-extrabold text-slate-900 leading-tight mb-4"
+              style="font-family: var(--font-heading); font-weight: 850; letter-spacing: -0.02em;">
+              Increase Student Enrolments with <br/><span class="text-primary-base" style="background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intelligent Admission Automation</span>
+            </h1>
+            <p id="hero-sub-title" class="lead text-slate-600 fw-normal" style="font-size: 19px; line-height: 1.7; max-width: 90%;">
+              Capture, nurture, and convert admission enquiries faster using automated engagement workflows and
+              real-time lead tracking designed for educational institutions.
+            </p>
+          </div>
+
+          <!-- Lead Form CTA anchor -->
+          <div id="hero-cta-action" class="d-flex align-items-center gap-4 flex-wrap mb-5">
+            <button id="hero-cta-button" data-scroll-to="admission-consultation-form"
+              class="btn rounded-pill py-3 px-4 text-white fw-bold d-flex align-items-center gap-2"
+              style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); box-shadow: 0 10px 25px rgba(29, 78, 216, 0.3); border: none; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+              onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 35px rgba(29, 78, 216, 0.4)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(29, 78, 216, 0.3)'"
+            >
+              <span style="font-size: 15px;">Book Growth Consultation</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </button>
+            
+            <!-- Social Proof Avatars -->
+            <div class="d-flex align-items-center gap-2">
+              <div class="d-flex" style="margin-right: 5px;">
+                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=A+S&background=E0E7FF&color=3730A3" alt="User">
+                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=M+D&background=DBEAFE&color=1E40AF" alt="User">
+                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=P+K&background=FEF3C7&color=B45309" alt="User">
+              </div>
+              <div class="text-start ms-1">
+                <div class="d-flex text-warning" style="font-size: 12px;">
+                  ★★★★★
+                </div>
+                <span class="text-slate-500 fw-bold" style="font-size: 11px;">Trusted by 500+ Inst.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtle Mini Stat Strip -->
+          <div id="hero-status-strip" class="row border-top border-slate-200 mt-5 pt-4 g-4 text-start">
+            <div class="col-4 position-relative">
+              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">98.4%</div>
+              <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
+                Response Speed</div>
+              <div class="position-absolute top-50 end-0 translate-middle-y" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+            </div>
+            <div class="col-4 position-relative">
+              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Instant</div>
+              <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
+                WhatsApp Nurture</div>
+              <div class="position-absolute top-50 end-0 translate-middle-y" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+            </div>
+            <div class="col-4">
+              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Unified</div>
+              <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">Ad
+                Conversion</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Graphical Illustration Frame -->
+        <div id="hero-right-visuals" class="col-12 col-lg-6 position-relative d-flex justify-content-center floating-gently" style="animation-duration: 8s;">
+
+          <div class="premium-image-wrapper">
+            <!-- Background Shape -->
+            <div class="premium-image-backing variant-1-backing"></div>
+
+            <!-- Content Viewport -->
+            <div class="premium-image-viewport variant-1-viewport">
+              <img id="hero-campus-image" src="assets/images/hero/indian_campus_hero_1780637621745.png"
+                alt="Students walking on Indian Campus grounds" referrerpolicy="no-referrer">
+              <!-- Badge Overlay inside image -->
+              <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-gradient-to-t"
+                style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
+                <div class="bg-white bg-opacity-95 rounded-3 p-3 shadow-lg">
+                  <span class="text-uppercase text-primary-base fw-bold block mb-1"
+                    style="font-size: 10px; tracking: 0.05em;">Verified Campaign Portal</span>
+                  <p class="text-dark-base fw-bold mb-0" style="font-size: 13.5px;">Plumb5 Admissions Engine Integration
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Micro Notification widget -->
+          <div class="position-absolute top-10 start-0 transform -rotate-1 z-30 d-none d-sm-block floating-gently" style="animation-delay: 0s;">
+            <div id="floating-notification-widget">
+              <div id="float-icon-box" class="p-2 rounded-full bg-blue-50">
+                <svg class="w-4 h-4 text-primary-base" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.348l1.157 1.157L5.25 21l2.495-1.18 1.158 1.158c1.325 1.414 3.244 2.272 5.347 2.272z" />
+                </svg>
+              </div>
+              <div id="floating-notification-body" class="flex-1">
+                <p id="float-label-box" class="text-uppercase text-slate-400 fw-bold m-0 p-0"
+                  style="font-size: 9px; line-height: 1;">WhatsApp Follow-Up Sent</p>
+                <p id="float-desc-box" class="text-slate-700 fw-semibold m-0" style="font-size: 11px;">Personalized
+                  course guide delivered</p>
+              </div>
+              <span id="float-stamp-box" class="text-slate-400 fw-bold font-monospace" style="font-size: 9.5px;">Just
+                now</span>
+            </div>
+          </div>
+
+          <!-- Absolute Bottom Corner Floating Accredit block -->
+          <div class="position-absolute bottom-10 end-0 transform rotate-2 z-30 d-none d-sm-block floating-gently" style="animation-delay: 1.5s;">
+            <div class="bg-white border p-3 rounded-4 shadow-lg d-flex align-items-center gap-3"
+              style="max-width: 250px;">
+              <div class="bg-amber-100 rounded-3 p-2 text-warning d-flex align-items-center justify-content-center">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9" />
+                </svg>
+              </div>
+              <div>
+                <span class="text-uppercase text-slate-400 fw-bold" style="font-size: 9px;">CONVERSIONS EN ROUTE</span>
+                <p class="text-dark fw-bold m-0" style="font-size: 12.5px;">Counselling Scheduled</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- --- SECTION 1: PAIN SECTION (IMAGE LEFT, CONTENT RIGHT) --- -->
+  <section id="pain-points-section" class="py-5 bg-white border-top">
+    <div class="container-xl py-5">
+      <div class="row align-items-center g-5">
+
+        <!-- Image Left -->
+        <div id="pain-section-visual" class="col-12 col-lg-5 order-2 order-lg-1">
+          <div class="premium-image-wrapper">
+            <div class="premium-image-backing variant-2-backing"></div>
+            <div class="premium-image-viewport variant-2-viewport">
+              <img id="pain-image-counselling" src="assets/images/hero/indian_counselling_vertical.png"
+                alt="Student Counselling Advisor discussion" referrerpolicy="no-referrer">
+              <div class="position-absolute bottom-0 start-0 end-0 p-4"
+                style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
+                <div class="bg-white bg-opacity-95 rounded-3 p-3 shadow">
+                  <span class="text-uppercase text-secondary-base fw-bold d-block mb-1"
+                    style="font-size: 10px;">ADMISSIONS VERIFICATION</span>
+                  <p class="text-dark-base fw-bold mb-0" style="font-size: 13.5px;">Active Lead Engagement Queue</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div id="pain-section-text" class="col-12 col-lg-7 order-1 order-lg-2 space-y-4">
+          <div class="mb-4">
+            <span
+              class="text-uppercase text-danger bg-danger bg-opacity-10 py-1.5 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+              style="font-size: 11px;">
+              Admissions Leakage Audit
+            </span>
+            <h2 class="display-6 fw-extrabold text-slate-900 mb-3"
+              style="font-family: var(--font-heading); font-weight: 800;">
+              Why Admission Enquiries Fail to Convert
+            </h2>
+            <p class="text-slate-600 fw-light leading-relaxed mb-4">
+              Traditional admission setups struggle because enquiries are scattered across calls, WhatsApp messages, and
+              email inbox logs. This structural disconnect often prevents prospective students and parents from
+              completing registration.
+            </p>
+          </div>
+
+          <!-- Interative Grid Cards -->
+          <div class="row g-3">
+            <div class="col-12 col-sm-6">
+              <div class="pain-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-danger bg-opacity-10 p-2.5 rounded-3 text-danger d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;">
+                    ✖
+                  </div>
+                  <span class="text-slate-300 font-monospace text-xs fw-bold">CASE 01</span>
+                </div>
+                <p class="text-slate-700 fw-semibold mb-0" style="font-size: 13.5px; line-height: 1.45;">
+                  Student enquiries are not followed up quickly
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="pain-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-danger bg-opacity-10 p-2.5 rounded-3 text-danger d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;">
+                    ✖
+                  </div>
+                  <span class="text-slate-300 font-monospace text-xs fw-bold">CASE 02</span>
+                </div>
+                <p class="text-slate-700 fw-semibold mb-0" style="font-size: 13.5px; line-height: 1.45;">
+                  Counsellors struggle to manage lead volume
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="pain-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-danger bg-opacity-10 p-2.5 rounded-3 text-danger d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;">
+                    ✖
+                  </div>
+                  <span class="text-slate-300 font-monospace text-xs fw-bold">CASE 03</span>
+                </div>
+                <p class="text-slate-700 fw-semibold mb-0" style="font-size: 13.5px; line-height: 1.45;">
+                  Admission teams lack visibility into student intent
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="pain-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-danger bg-opacity-10 p-2.5 rounded-3 text-danger d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;">
+                    ✖
+                  </div>
+                  <span class="text-slate-300 font-monospace text-xs fw-bold">CASE 04</span>
+                </div>
+                <p class="text-slate-700 fw-semibold mb-0" style="font-size: 13.5px; line-height: 1.45;">
+                  Marketing campaigns generate leads but not admissions
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="pain-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-danger bg-opacity-10 p-2.5 rounded-3 text-danger d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;">
+                    ✖
+                  </div>
+                  <span class="text-slate-300 font-monospace text-xs fw-bold">CASE 05</span>
+                </div>
+                <p class="text-slate-700 fw-semibold mb-0" style="font-size: 13.5px; line-height: 1.45;">
+                  Follow-ups across calls, WhatsApp, and email remain unstructured
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 2: OUTCOME SECTION (CONTENT LEFT, IMAGE RIGHT) --- -->
+  <section id="outcomes-section" class="py-5 bg-light-subtle"
+    style="background-color: #FAFAFA;">
+    <div class="container-xl py-5">
+      <div class="row align-items-center g-5">
+
+        <!-- Content Left -->
+        <div id="outcome-section-text" class="col-12 col-lg-7 space-y-4">
+          <div class="mb-4">
+            <span
+              class="text-uppercase text-success bg-success bg-opacity-10 py-1.5 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+              style="font-size: 11px;">
+              Growth Objectives
+            </span>
+            <h2 class="display-6 fw-extrabold text-slate-900 mb-3"
+              style="font-family: var(--font-heading); font-weight: 800;">
+              Improve Student Admission Conversions
+            </h2>
+            <p class="text-slate-600 fw-light leading-relaxed mb-4">
+              Plumb5 replaces fragmented databases with a unified student communication engine that is designed to
+              elevate institutional standing, response frequency, and enrolment yields.
+            </p>
+          </div>
+
+          <!-- Custom Editorial Outcomes Stack -->
+          <div class="d-flex flex-column gap-3">
+
+            <div class="outcome-card">
+              <div
+                class=" bg-opacity-10 text-primary-base rounded-3 fs-5 fw-extrabold d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 44px; height: 44px; font-family: var(--font-heading);">
+                01
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark fs-6 mb-1" style="font-family: var(--font-heading);">Capture More Admission
+                  Enquiries</h4>
+                <p class="text-slate-500 m-0" style="font-size: 13.5px;">Track website visitors and enquiry behaviour in
+                  real time.</p>
+              </div>
+            </div>
+
+            <div class="outcome-card">
+              <div
+                class=" bg-opacity-10 text-primary-base rounded-3 fs-5 fw-extrabold d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 44px; height: 44px; font-family: var(--font-heading);">
+                02
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark fs-6 mb-1" style="font-family: var(--font-heading);">Automate Student
+                  Follow-Ups</h4>
+                <p class="text-slate-500 m-0" style="font-size: 13.5px;">Engage students instantly across WhatsApp,
+                  email, and SMS.</p>
+              </div>
+            </div>
+
+            <div class="outcome-card">
+              <div
+                class=" bg-opacity-10 text-primary-base rounded-3 fs-5 fw-extrabold d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 44px; height: 44px; font-family: var(--font-heading);">
+                03
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark fs-6 mb-1" style="font-family: var(--font-heading);">Improve Counsellor
+                  Productivity</h4>
+                <p class="text-slate-500 m-0" style="font-size: 13.5px;">Assign and prioritise leads intelligently.</p>
+              </div>
+            </div>
+
+            <div class="outcome-card">
+              <div
+                class=" bg-opacity-10 text-primary-base rounded-3 fs-5 fw-extrabold d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 44px; height: 44px; font-family: var(--font-heading);">
+                04
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark fs-6 mb-1" style="font-family: var(--font-heading);">Reduce Admission
+                  Drop-Offs</h4>
+                <p class="text-slate-500 m-0" style="font-size: 13.5px;">Nurture students throughout the admission
+                  journey.</p>
+              </div>
+            </div>
+
+            <div class="outcome-card">
+              <div
+                class=" bg-opacity-10 text-primary-base rounded-3 fs-5 fw-extrabold d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 44px; height: 44px; font-family: var(--font-heading);">
+                05
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark fs-6 mb-1" style="font-family: var(--font-heading);">Improve Marketing ROI
+                </h4>
+                <p class="text-slate-500 m-0" style="font-size: 13.5px;">Track which campaigns generate actual
+                  admissions.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Image Right -->
+        <div id="outcome-section-visual" class="col-12 col-lg-5 relative">
+          <div class="premium-image-wrapper">
+            <div class="premium-image-backing variant-3-backing"></div>
+            <div class="premium-image-viewport variant-3-viewport">
+              <img id="outcome-image-graduation" src="assets/images/hero/indian_graduation_success_1780637677672.png"
+                alt="Proud Indian Graduates holding degrees" referrerpolicy="no-referrer">
+              <div class="position-absolute bottom-0 start-0 end-0 p-4"
+                style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
+                <div class="bg-white bg-opacity-95 rounded-3 p-3 shadow">
+                  <span class="text-uppercase text-warning fw-bold d-block mb-1" style="font-size: 10px;">SUCCESS
+                    OUTCOME</span>
+                  <p class="text-dark-base fw-bold mb-0" style="font-size: 13.5px;">Admissions Milestones Complete</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Absolute Bottom Layout indicator -->
+          <!-- <div class="position-absolute bottom-10 start-0 transform -rotate-1 z-30 d-none d-sm-block">
+              <div class="bg-white border p-3 rounded-4 shadow-lg d-flex align-items-center gap-3" style="max-width: 250px;">
+                <div class="bg-success bg-opacity-10 rounded-circle text-success d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: bold;">
+                  ✓
+                </div>
+                <div>
+                  <span class="text-uppercase text-slate-400 fw-bold" style="font-size: 9px;">CONVERSIONS KEYED</span>
+                  <p class="text-dark fw-bold m-0" style="font-size: 12.5px;">Application Approved</p>
+                </div>
+              </div>
+            </div> -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 3: DIFFERENTIATOR SECTION (IMAGE LEFT, CONTENT RIGHT) --- -->
+  <section id="differentiator-section" class="py-5 bg-white">
+    <div class="container-xl py-5">
+      <div class="row align-items-center g-5">
+
+        <!-- Image Left -->
+        <div id="differentiator-visual" class="col-12 col-lg-5 order-2 order-lg-1">
+          <div class="premium-image-wrapper">
+            <div class="premium-image-backing variant-4-backing"></div>
+            <div class="premium-image-viewport variant-4-viewport">
+              <img id="differentiator-collaged-image"
+                src="assets/images/hero/student.png"
+                alt="Indian parents discussing academic counselling options" referrerpolicy="no-referrer">
+              <div class="position-absolute bottom-0 start-0 end-0 p-4"
+                style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
+                <!-- <div class="bg-white bg-opacity-95 rounded-3 p-3 shadow">
+                  <span class="text-uppercase text-primary-base fw-bold d-block mb-1"
+                    style="font-size: 10px;">INTELLIGENT INTEGRATION</span>
+                  <p class="text-dark-base fw-bold mb-0" style="font-size: 13.5px;">One-Touch Campaign Setup</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div id="differentiator-text" class="col-12 col-lg-7 order-1 order-lg-2 space-y-4">
+          <div class="mb-4">
+            <span
+              class="text-uppercase text-warning bg-warning bg-opacity-10 py-1.5 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+              style="font-size: 11px;">
+              Platform Difference
+            </span>
+            <h2 class="display-6 fw-extrabold text-slate-900 mb-3"
+              style="font-family: var(--font-heading); font-weight: 800;">
+              One Unified Admission Engagement Platform
+            </h2>
+            <p class="text-slate-600 fw-light leading-relaxed mb-4" style="font-size: 16.5px;">
+              Plumb5 helps educational institutions centralise enquiry management, communication, student engagement,
+              marketing automation, and analytics in one platform.
+            </p>
+          </div>
+
+          <!-- Mini Spec Column Features -->
+          <div class="row g-4">
+            <div class="col-12 col-sm-6">
+              <div class="p-4 bg-light border rounded-4 space-y-2" style="background-color: #FAFAFA;">
+                <div class="bg-primary-base rounded-3 text-white d-flex align-items-center justify-content-center mb-3"
+                  style="width: 44px; height: 44px;">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.961 5.961 0 00-.721-2.93M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75a1.5 1.5 0 00-3 0 1.5 1.5 0 003 0z" />
+                  </svg>
+                </div>
+                <h4 class="fw-bold fs-6" style="font-family: var(--font-heading);">Continuous Admissions Lifecycles</h4>
+                <p class="text-slate-500 m-0" style="font-size: 12.5px; line-height: 1.5;">Continuous student
+                  communication tracking from visual ad click down to successful physical onboarding.</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="p-4 bg-light border rounded-4 space-y-2" style="background-color: #FAFAFA;">
+                <div class="bg-warning rounded-3 text-white d-flex align-items-center justify-content-center mb-3"
+                  style="width: 44px; height: 44px;">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                  </svg>
+                </div>
+                <h4 class="fw-bold fs-6" style="font-family: var(--font-heading);">Multi-Channel Delivery</h4>
+                <p class="text-slate-500 m-0" style="font-size: 12.5px; line-height: 1.5;">Coordinated parent outreach
+                  across standard text SMS alerts, transaction Emails, and WhatsApp campaigns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 text-start">
+            <button data-scroll-to="admission-consultation-form"
+              class="btn text-primary-base fw-bold fs-6 p-0 hover:text-dark-base border-none d-flex align-items-center gap-2">
+              <span>Discover our multi-channel delivery</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 4: PLATFORM SECTION (APPLE STYLE DETAILED DEVICE PRESENTATION) --- -->
+  <section id="platform-software-showcase" class="py-5 bg-dark-base text-white border-top border-bottom"
+    style="border-radius: 3rem; margin: 3rem 1.5rem;">
+    <div class="container-xl py-5">
+
+      <!-- Apple style header -->
+      <div class="row text-center max-w-3xl mx-auto mb-5">
+        <div class="col-12">
+          <span
+            class="text-uppercase text-sky-400 bg-info bg-opacity-10 py-1 px-3 border border-info border-opacity-25 rounded-pill fw-bold text-xs d-inline-block mb-3"
+            style="font-size: 11px;">
+            Technology Integration Spec
+          </span>
+          <h2 class="display-5 fw-extrabold text-white mb-3"
+            style="font-family: var(--font-heading); font-weight: 800;">
+            A Cleaner Approach to Institutional Management
+          </h2>
+          <p class="lead text-slate-300 max-w-2xl mx-auto fw-light" style="font-size: 17px; line-height: 1.6;">
+            We present the Plumb5 Education Admin Console: high-speed automation wrapped inside an elegant, highly
+            productive portal designed for counsellor ease.
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <!-- Column 1: Tech Specs -->
+        <div id="platform-specs-left" class="col-12 col-lg-4 space-y-4">
+
+          <div id="spec-admission-dashboard"
+            class="p-4 bg-slate-800 bg-opacity-20 border border-slate-800 rounded-4 transition-all hover:bg-slate-800 hover:bg-opacity-45 mb-3">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="bg-info bg-opacity-10 rounded-3 text-info d-flex align-items-center justify-content-center"
+                style="width: 36px; height: 36px;">
+                ✓
+              </div>
+              <h4 class="fw-bold text-white fs-6 mb-0" style="font-family: var(--font-heading);">Admission Dashboard
+              </h4>
+            </div>
+            <p class="text-slate-400 mb-0" style="font-size: 12px; line-height: 1.5;">
+              View complete student histories, previous chat scripts, call statuses, and visual progress charts.
+            </p>
+          </div>
+
+          <div id="spec-whatsapp-automation"
+            class="p-4 bg-slate-800 bg-opacity-20 border border-slate-800 rounded-4 transition-all hover:bg-slate-800 hover:bg-opacity-45 mb-3">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div
+                class="bg-success bg-opacity-10 rounded-3 text-success d-flex align-items-center justify-content-center"
+                style="width: 36px; height: 36px;">
+                ✓
+              </div>
+              <h4 class="fw-bold text-white fs-6 mb-0" style="font-family: var(--font-heading);">WhatsApp Automation
+              </h4>
+            </div>
+            <p class="text-slate-400 mb-0" style="font-size: 12px; line-height: 1.5;">
+              Automatically deliver customized curriculum brochures and follow up details inside standard communication
+              streams.
+            </p>
+          </div>
+
+          <div id="spec-lead-tracking"
+            class="p-4 bg-slate-800 bg-opacity-20 border border-slate-800 rounded-4 transition-all hover:bg-slate-800 hover:bg-opacity-45">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div
+                class="bg-warning bg-opacity-10 rounded-3 text-warning d-flex align-items-center justify-content-center"
+                style="width: 36px; height: 36px;">
+                ✓
+              </div>
+              <h4 class="fw-bold text-white fs-6 mb-0" style="font-family: var(--font-heading);">Lead Tracking</h4>
+            </div>
+            <p class="text-slate-400 mb-0" style="font-size: 12px; line-height: 1.5;">
+              Attribute and verify which digital ad layout, search keywords, or visual banner produced successful
+              admissions.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Column 2: Aluminum Display stand laptop -->
+        <div id="platform-laptop-mockup-container" class="col-12 col-lg-8 d-flex justify-content-center">
+          <div class="laptop-mockup-wrapper">
+
+            <!-- Screen housing bezel -->
+            <div class="laptop-screen-bezel">
+              <div class="laptop-screen-content">
+                <img id="platform-laptop-screen" src="assets/images/dashboard/real-dashboard.png"
+                  alt="Plumb5 Admissions Dashboard Layout Mockup" referrerpolicy="no-referrer">
+              </div>
+            </div>
+
+            <!-- Base stand alum -->
+            <div class="laptop-base-aluminium px-5 px-sm-5 mt-1 d-flex justify-content-center">
+              <div class="bg-slate-900 rounded-bottom" style="width: 80px; height: 6px;"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- SECTION 5: USE CASES SECTION (IMAGE LEFT, CARDS RIGHT) --- -->
+  <section id="use-cases-section" class="py-5 bg-light-subtle border-top border-bottom"
+    style="background-color: #FAFAFA;">
+    <div class="container-xl py-5">
+      <div class="row align-items-center g-5">
+
+        <!-- Left: Bento Use Case Cards Grid -->
+        <div id="use-cases-grid-left" class="col-12 col-lg-7 order-2 order-lg-1">
+          <div class="row g-3">
+            <div class="col-12 col-sm-4">
+              <div class="use-case-card">
+                <div class="space-y-2">
+                  <span class="glow-dot"
+                    style="background-color: var(--color-accent); box-shadow: 0 0 10px var(--color-accent);"></span>
+                  <h3 class="fw-extrabold text-dark-base fs-5" style="font-family: var(--font-heading);">Schools</h3>
+                </div>
+                <p class="text-slate-500 fw-medium m-0" style="font-size: 12.5px; line-height: 1.55;">
+                  Improve admission enquiry management and parent engagement.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-4">
+              <div class="use-case-card">
+                <div class="space-y-2">
+                  <span class="glow-dot"
+                    style="background-color: var(--color-accent); box-shadow: 0 0 10px var(--color-accent);"></span>
+                  <h3 class="fw-extrabold text-dark-base fs-5" style="font-family: var(--font-heading);">Colleges &
+                    Universities</h3>
+                </div>
+                <p class="text-slate-500 fw-medium m-0" style="font-size: 12.5px; line-height: 1.55;">
+                  Automate counselling workflows and improve admission conversions.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-4">
+              <div class="use-case-card">
+                <div class="space-y-2">
+                  <span class="glow-dot"
+                    style="background-color: var(--color-accent); box-shadow: 0 0 10px var(--color-accent);"></span>
+                  <h3 class="fw-extrabold text-dark-base fs-5" style="font-family: var(--font-heading);">EdTech
+                    Platforms</h3>
+                </div>
+                <p class="text-slate-500 fw-medium m-0" style="font-size: 12.5px; line-height: 1.55;">
+                  Track learner behaviour and improve course enrolments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text Description -->
+        <div id="use-cases-intro-right" class="col-12 col-lg-5 order-1 order-lg-2 space-y-4">
+          <span
+            class="text-uppercase text-primary-base  bg-opacity-10 py-1.5 px-3 rounded-pill fw-bold text-xs d-inline-block"
+            style="font-size: 11px;">
+            Industry Use Cases
+          </span>
+          <h2 class="display-6 fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-weight: 800;">
+            Designed and Pre-Configured for Your Specific Category
+          </h2>
+          <p class="text-slate-600 fw-light leading-relaxed" style="font-size: 16px;">
+            Every institutional model operates on unique standards. Whether managing K-12 parent-school orientations or
+            coordinating expansive higher education counselling cohorts, Plumb5's workflow engine adapts precisely to
+            your category rules.
+          </p>
+          <div class="pt-2 text-start">
+            <button data-scroll-to="admission-consultation-form"
+              class="btn text-primary-base fw-bold text-xs p-0 border-none d-flex align-items-center gap-1">
+              <span>Review layouts for your institution</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 6: ADMISSION JOURNEY SECTION (VISUAL TIMELINE) --- -->
+  <section id="journey-timeline-section" class="py-5 bg-white">
+    <div class="container-xl py-5">
+
+      <!-- Section Header -->
+      <div class="row text-center max-w-2xl mx-auto mb-5">
+        <div class="col-12">
+          <span
+            class="text-uppercase text-primary bg-primary bg-opacity-10 py-1 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+            style="font-size: 11px;">
+            Admission Journey Section
+          </span>
+          <h2 class="display-6 fw-extrabold text-dark-base mb-3"
+            style="font-family: var(--font-heading); font-weight: 800;">
+            Build a Unified Student Admission Journey
+          </h2>
+          <p class="text-slate-600 fw-light" style="font-size: 15.5px;">
+            Follow student lifecycle milestones from introductory touchpoints down to successful classrooms onboarding,
+            fully tracked inside Plumb5.
+          </p>
+        </div>
+      </div>
+
+      <!-- Custom Visual Timeline -->
+      <div class="row g-4 mt-2">
+
+        <div class="col-12 col-md-4 col-lg-2.4 col-lg">
+          <div class="timeline-card">
+            <span class="timeline-badge">01</span>
+            <div
+              class="bg-primary-base bg-opacity-10 p-2.5 rounded-3 text-white d-flex align-items-center justify-content-center mb-4"
+              style="width: 44px; height: 44px;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 class="fw-bold fs-6 mb-2" style="font-family: var(--font-heading);">Student Enquiry</h4>
+            <p class="text-slate-500 m-0" style="font-size: 11.5px; line-height: 1.5;">Instant multi-channel lead
+              capture & tracking</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2.4 col-lg">
+          <div class="timeline-card">
+            <span class="timeline-badge">02</span>
+            <div
+              class="bg-warning bg-opacity-10 p-2.5 rounded-3 text-warning d-flex align-items-center justify-content-center mb-4"
+              style="width: 44px; height: 44px;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 class="fw-bold fs-6 mb-2" style="font-family: var(--font-heading);">Counselling</h4>
+            <p class="text-slate-500 m-0" style="font-size: 11.5px; line-height: 1.5;">Smart scheduler assignment based
+              on intent score</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2.4 col-lg">
+          <div class="timeline-card">
+            <span class="timeline-badge">03</span>
+            <div
+              class="bg-success bg-opacity-10 p-2.5 rounded-3 text-success d-flex align-items-center justify-content-center mb-4"
+              style="width: 44px; height: 44px;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h4 class="fw-bold fs-6 mb-2" style="font-family: var(--font-heading);">Follow-Up</h4>
+            <p class="text-slate-500 m-0" style="font-size: 11.5px; line-height: 1.5;">Instant WhatsApp & email nurture
+              engagement</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2.4 col-lg">
+          <div class="timeline-card">
+            <span class="timeline-badge">04</span>
+            <div
+              class="bg-info bg-opacity-10 p-2.5 rounded-3 text-info d-flex align-items-center justify-content-center mb-4"
+              style="width: 44px; height: 44px;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+              </svg>
+            </div>
+            <h4 class="fw-bold fs-6 mb-2" style="font-family: var(--font-heading);">Application</h4>
+            <p class="text-slate-500 m-0" style="font-size: 11.5px; line-height: 1.5;">Simplified online application
+              tracking portal</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-2.4 col-lg">
+          <div class="timeline-card">
+            <span class="timeline-badge">05</span>
+            <div
+              class="bg-dark-base bg-opacity-10 p-2.5 rounded-3 text-warning  d-flex align-items-center justify-content-center mb-4"
+              style="width: 44px; height: 44px;">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9" />
+              </svg>
+            </div>
+            <h4 class="fw-bold fs-6 mb-2" style="font-family: var(--font-heading);">Admission</h4>
+            <p class="text-slate-500 m-0" style="font-size: 11.5px; line-height: 1.5;">Successful seat allocation &
+              welcome workflow</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- SECTION 7: SOCIAL PROOF --- -->
+  <section id="social-proof-testimonials-section" class="py-5 bg-light-subtle border-top border-bottom"
+    style="background-color: #FAFAFA;">
+    <div class="container-xl py-5">
+
+      <!-- Section Header -->
+      <div class="row text-center max-w-3xl mx-auto mb-5">
+        <div class="col-12">
+          <span
+            class="text-uppercase text-warning bg-warning bg-opacity-10 py-1.5 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+            style="font-size: 11px;">
+            Admission Trust Framework
+          </span>
+          <h2 class="display-6 fw-extrabold text-slate-800" style="font-family: var(--font-heading); font-weight: 850;">
+            Trusted by education brands focused on increasing admissions.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Verification Brand Cards Grid -->
+      <div class="client-logo-section">
+
+        <div class="logo-slider">
+
+          <div class="logo-track">
+
+            <!-- Set 1 -->
+            <div class="logo-card">
+              <img src="assets/lp-cust/aims-preschool.jpg" alt="Godrej">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/arena.jpg" alt="Groww">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/avanse-edu.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/directors-institute.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/dps.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/dsu.jpg" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/emerald.jpg" alt="Unilever">
+            </div>
+
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/euroschool.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/greenwood.png" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/little-elly.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/mountLitera.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/mussorie-international-school.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/rbia.jpg" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/sir-mvsa.jpg" alt="Kotak">
+            </div>
+
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/skills-pro-360.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/skool-of-code.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/tjohn.png" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/uwa.jpg" alt="Kotak">
+            </div>
+
+
+            <!-- Duplicate for infinite loop -->
+            <!-- Set 1 -->
+            <div class="logo-card">
+              <img src="assets/lp-cust/aims-preschool.jpg" alt="Godrej">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/arena.jpg" alt="Groww">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/avanse-edu.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/directors-institute.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/dps.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/dsu.jpg" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/emerald.jpg" alt="Unilever">
+            </div>
+
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/euroschool.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/greenwood.png" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/little-elly.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/mountLitera.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/mussorie-international-school.jpg" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/rbia.jpg" alt="Kotak">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/sir-mvsa.jpg" alt="Kotak">
+            </div>
+
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/skills-pro-360.jpg" alt="Unilever">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/skool-of-code.jpg" alt="AIMS">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/tjohn.png" alt="Brigade">
+            </div>
+
+            <div class="logo-card">
+              <img src="assets/lp-cust/uwa.jpg" alt="Kotak">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Success stories block Callouts -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- Callout 1 -->
+        <div class="col-12 col-md-6">
+          <div class="bg-white p-5 rounded-4 border shadow-sm position-relative">
+            <div class="position-absolute opacity-10 font-serif"
+              style="font-size: 120px; top: -10px; left: 0px; color: var(--color-primary); pointer-events: none;">“
+            </div>
+            <p class="text-slate-750 fst-italic leading-relaxed mb-4 relative-z"
+              style="font-size: 14.5px; z-index: 10;">
+              Plumb5 transformed our enrolment journey. Enquiries that used to take days to follow up are now engaged on
+              WhatsApp within seconds.
+            </p>
+            <hr class="border-light opacity-50 mb-3">
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="bg-success bg-opacity-10 text-primary-base rounded-circle d-flex align-items-center justify-content-center fw-bold text-uppercase"
+                style="width: 44px; height: 44px;">
+                S
+              </div>
+              <div>
+                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Dr. Alok Sen</h5>
+                <p class="text-slate-400 m-0" style="font-size: 11px;">Director of Admissions</p>
+                <p class="text-uppercase text-primary-base font-monospace fw-bold m-0"
+                  style="font-size: 9.5px; tracking: 0.05em;">Vanguard International Institute</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Callout 2 -->
+        <div class="col-12 col-md-6">
+          <div class="bg-white p-5 rounded-4 border shadow-sm position-relative">
+            <div class="position-absolute opacity-10 font-serif"
+              style="font-size: 120px; top: -10px; left: 0px; color: var(--color-primary); pointer-events: none;">“
+            </div>
+            <p class="text-slate-750 fst-italic leading-relaxed mb-4 relative-z"
+              style="font-size: 14.5px; z-index: 10;">
+              Counsellor productivity saw a massive jump. We can now prioritize leads based on actual engagement scoring
+              and real-time interest.
+            </p>
+            <hr class="border-light opacity-50 mb-3">
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center fw-bold text-uppercase"
+                style="width: 44px; height: 44px;">
+                D
+              </div>
+              <div>
+                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Meera Deshmukh</h5>
+                <p class="text-slate-400 m-0" style="font-size: 11px;">Registrar</p>
+                <p class="text-uppercase text-primary-base font-monospace fw-bold m-0"
+                  style="font-size: 9.5px; tracking: 0.05em;">St. Xavier's Academy of Higher Education</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- SECTION 8: CUSTOM LEAD FORM SECTION WITH ASYMMETRIC BENEFITS SPLIT --- -->
+  <section id="admission-consultation-form"
+    class="py-5 bg-dark-base text-white overflow-hidden border-top border-primary-base border-4"
+    style="border-radius: 3rem 3rem 0 0;">
+    <div class="container-xl py-5 position-relative z-10">
+      <div class="row align-items-center g-5">
+
+        <!-- Column 1: Benefits Left -->
+        <div id="lead-form-benefits" class="col-12 col-lg-6 space-y-4">
+
+          <div class="mb-4">
+            <span
+              class="text-uppercase text-white bg-primary-base bg-opacity-15 py-1 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+              style="font-size: 10.5px;">
+              Direct Campaign Consultation
+            </span>
+            <h2 class="display-6 fw-extrabold text-white mb-3"
+              style="font-family: var(--font-heading); font-style: normal; font-weight: 800;">
+              Accelerate Admission Growth & Streamline Student Conversions
+            </h2>
+            <p class="text-slate-300 fw-light leading-relaxed mb-0" style="font-size: 15.5px;">
+              Discover how integrating Plumb5's custom flows directly aligns with your current admissions campaigns to
+              drive qualified results.
+            </p>
+          </div>
+
+          <hr class="border-slate-800 my-4">
+
+          <!-- Check items -->
+          <div class="d-flex flex-column gap-4">
+
+            <div class="d-flex gap-3 align-items-start">
+              <div
+                class="bg-primary-base bg-opacity-20 text-white rounded-circle d-flex align-items-center justify-content-center p-1 flex-shrink-0"
+                style="width: 28px; height: 28px;">
+                ✓
+              </div>
+              <div>
+                <h4 class="fw-bold text-white fs-6 mb-1" style="font-family: var(--font-heading);">Fast-Track Enquiry
+                  Response</h4>
+                <p class="text-slate-450 m-0" style="font-size: 12px; line-height: 1.5; color: #94A3B8;">Reduce
+                  speed-to-lead with instant automated counselling queues</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 align-items-start">
+              <div
+                class="bg-primary-base bg-opacity-20 text-white rounded-circle d-flex align-items-center justify-content-center p-1 flex-shrink-0"
+                style="width: 28px; height: 28px;">
+                ✓
+              </div>
+              <div>
+                <h4 class="fw-bold text-white fs-6 mb-1" style="font-family: var(--font-heading);">Multi-channel
+                  Engagement (WhatsApp First)</h4>
+                <p class="text-slate-450 m-0" style="font-size: 12px; line-height: 1.5; color: #94A3B8;">Nurture
+                  students instantly across dynamic channels of choices</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 align-items-start">
+              <div
+                class="bg-primary-base bg-opacity-20 text-white rounded-circle d-flex align-items-center justify-content-center p-1 flex-shrink-0"
+                style="width: 28px; height: 28px;">
+                ✓
+              </div>
+              <div>
+                <h4 class="fw-bold text-white fs-6 mb-1" style="font-family: var(--font-heading);">Integrated Lead
+                  Verification Engine</h4>
+                <p class="text-slate-450 m-0" style="font-size: 12px; line-height: 1.5; color: #94A3B8;">Qualify
+                  interest grades before handoff to human advisors</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="bg-slate-850 border border-slate-800 p-2 rounded-4 d-flex align-items-center gap-3 mt-4"
+            style="background-color: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255,255,255,0.05);">
+            <div
+              class="bg-warning bg-opacity-10 text-warning d-flex align-items-center justify-content-center rounded-3 p-2">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="fw-bold text-white mb-0" style="font-size: 13.5px;">Consultation Duration: 25 mins</p>
+              <p class="text-slate-400 mb-0" style="font-size: 11px;">Personalized review of your marketing layout and
+                channels</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 2: Form Right -->
+        <div id="lead-form-container" class="col-12 col-lg-6 position-relative">
+          <div id="form-card-inner-box"
+            class="glass-card bg-white text-slate-800 rounded-4 p-4 p-sm-5 shadow-2xl relative border-2 border-white">
+
+            <form id="admission-enquiry-lead-form" class="space-y-4">
+              <div class="mb-4">
+                <h3 class="fw-extrabold text-dark-base mb-1" style="font-family: var(--font-heading); font-size: 22px;">
+                  Book Your Admission Growth Consultation
+                </h3>
+                <p class="text-slate-500 mb-0" style="font-size: 12.5px;">
+                  Submit details below and connect with our academic integration experts.
+                </p>
+              </div>
+
+              <hr class="border-light opacity-50 mb-4">
+
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">First &amp;
+                  Last Name</label>
+                <div class="position-relative">
+                  <input id="input-fullname" type="text" name="fullName" placeholder="e.g. Anand Sharma"
+                    class="form-control rounded-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
+                </div>
+                <p id="error-fullname" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
+              </div>
+
+              <!-- Academic/Work Email -->
+              <div class="mb-3">
+                <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">Academic or
+                  Work Email</label>
+                <div class="position-relative">
+                  <input id="input-email" type="email" name="email" placeholder="e.g. principal@institution.edu"
+                    class="form-control rounded-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
+                </div>
+                <p id="error-email" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
+              </div>
+
+              <!-- Phone -->
+              <div class="mb-3">
+                <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">Indian
+                  Mobile Number</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light" style="font-size: 13px; font-weight: bold;">+91</span>
+                  <input id="input-phone" type="tel" name="phone" placeholder="98765 43210"
+                    class="form-control rounded-end-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
+                </div>
+                <p id="error-phone" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
+              </div>
+
+              <!-- Institution Type -->
+              <div class="mb-4">
+                <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">Institution
+                  Category</label>
+                <select id="input-institution" name="institutionType"
+                  class="form-select rounded-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
+                  <option value="university">College &amp; University</option>
+                  <option value="school">School / Higher Secondary</option>
+                  <option value="edtech">EdTech Platform</option>
+                  <option value="coaching">Coaching / Training Institute</option>
+                </select>
+              </div>
+
+              <!-- CTA -->
+              <div class="pt-2">
+                <button id="form-submit-button" type="submit"
+                  class="btn bg-primary-base text-white fw-bold w-full py-3 rounded-3 d-flex align-items-center justify-content-center gap-2 btn-primary-grow uppercase tracking-widest text-xs"
+                  style="font-size: 12px; width: 100%; border: none;">
+                  <span>Book My Consultation</span>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                  </svg>
+                </button>
+              </div>
+
+
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 9: FAQ SECTION --- -->
+  <section id="faq-section" class="py-5 bg-white border-top">
+    <div class="container-xl py-5">
+
+      <!-- Headers -->
+      <div class="row text-center max-w-2xl mx-auto mb-5">
+        <div class="col-12">
+          <span
+            class="text-uppercase text-primary bg-primary bg-opacity-10 py-1 px-3 rounded-pill fw-bold text-xs d-inline-block mb-3"
+            style="font-size: 11px;">
+            Campaign FAQs
+          </span>
+          <h2 class="display-6 fw-extrabold text-dark-base mb-3"
+            style="font-family: var(--font-heading); font-weight: 800;">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-slate-600 fw-light" style="font-size: 15px;">
+            Find answers to core system capabilities and integrations below.
+          </p>
+        </div>
+      </div>
+
+      <!-- Custom premium Accordions -->
+      <div id="faq-accordion-group" class="max-w-3xl mx-auto">
+
+        <!-- Accordion 1 -->
+        <div id="faq-card-0" class="faq-item-card is-open">
+          <button class="faq-btn" id="faq-btn-0">
+            <div class="d-flex align-items-center gap-3">
+              <div class=" bg-opacity-10 text-primary-base rounded-3 d-flex align-items-center justify-content-center"
+                style="width: 32px; height: 32px;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </div>
+              <span>Can Plumb5 help manage admission enquiries?</span>
+            </div>
+            <div class="faq-icon-holder">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                style="width: 16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer-pane" id="faq-body-0">
+            <div class="answer-inner">
+              Yes. Plumb5 helps institutions automate enquiry tracking and follow-ups.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div id="faq-card-1" class="faq-item-card">
+          <button class="faq-btn" id="faq-btn-1">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-light rounded-3 text-slate-400 d-flex align-items-center justify-content-center"
+                style="width: 32px; height: 32px;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </div>
+              <span>Can we track campaign performance?</span>
+            </div>
+            <div class="faq-icon-holder">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                style="width: 16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer-pane" id="faq-body-1">
+            <div class="answer-inner">
+              Yes. You can identify which campaigns generate qualified admissions.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div id="faq-card-2" class="faq-item-card">
+          <button class="faq-btn" id="faq-btn-2">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-light rounded-3 text-slate-400 d-flex align-items-center justify-content-center"
+                style="width: 32px; height: 32px;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </div>
+              <span>Is WhatsApp automation available?</span>
+            </div>
+            <div class="faq-icon-holder">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+                style="width: 16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer-pane" id="faq-body-2">
+            <div class="answer-inner">
+              Yes. Institutions can automate engagement across WhatsApp and multiple channels.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- FOOTER CTA ENGINE --- -->
+  <footer id="campaign-footer-cta" class="bg-dark-base text-white py-5 px-3 border-top"
+    style="border-radius: 3rem 3rem 0 0;">
+    <div class="container-xl py-5 text-center space-y-4">
+
+      <div class="max-w-2xl mx-auto mb-4">
+        <!-- Wordmark -->
+        <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+          <img src="assets/images/brand/logo.png" alt="Plumb5" class="img-fluid" style="height: 48px; width: auto; filter: brightness(0) invert(1);">
+        </div>
+
+        <h3 class="fw-light text-slate-300 fs-4 mb-4" style="line-height: 1.55;">
+          Improve admissions, reduce enquiry leakage, and streamline student engagement with Plumb5.
+        </h3>
+      </div>
+
+      <hr class="border-secondary opacity-10 max-w-sm mx-auto mb-4">
+
+      <!-- Final actionable trigger -->
+      <div class="mb-5">
+        <button data-scroll-to="admission-consultation-form"
+          class="btn py-3 px-5 rounded-pill bg-primary-base btn-primary-grow text-white fw-bold d-inline-flex align-items-center gap-2">
+          <span>Book My Admission Growth Consultation</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Safe specs banner block -->
+      <div
+        class="row pt-4 max-w-3xl mx-auto text-slate-500 font-monospace text-xs text-uppercase border-top border-slate-800 border-opacity-50 text-center g-3">
+        <div class="col-12 col-sm-4 d-flex align-items-center justify-content-center gap-2">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-slate-400">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+          </svg>
+          <span>SSL Secured Communication</span>
+        </div>
+        <div class="col-12 col-sm-4">
+          <span>© 2026 Plumb5 Admissions Campaign</span>
+        </div>
+        <div class="col-12 col-sm-4">
+          <span>All rights reserved verbatim</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- --- STICKY MOBILE CTA BAR (Floating drawer entry) --- -->
+  <!-- <div id="sticky-mobile-cta">
+      <div class="d-flex flex-column">
+        <span class="text-uppercase text-primary-base fw-bold" style="font-size: 8px; line-height: 1; letter-spacing: 0.05em;">Campaign Engine</span>
+        <span class="text-dark fw-bold m-0 p-0" style="font-size: 11.5px; line-height: 1.25; margin-top: 2px;">Consultation Live</span>
+      </div>
+      <button 
+        data-scroll-to="admission-consultation-form"
+        class="btn bg-primary-base text-white fw-bold py-2.5 px-4 rounded-3 d-flex align-items-center gap-1.5"
+        style="font-size: 11px; border: none;"
+      >
+        <span>Book Consultation</span>
+      </button>
+    </div> -->
+
+  <!-- Bootstrap & Custom JS bundle config -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
