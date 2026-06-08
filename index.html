@@ -17,7 +17,7 @@
 <body>
 
   <!-- --- DYNAMIC SYSTEM TICKER (PORTAL TIME) --- -->
-  <div id="campaign-ticker-bar" class="py-2.5 px-4 text-white">
+  <!-- <div id="campaign-ticker-bar" class="py-2.5 px-4 text-white">
     <div class="container-xl d-flex align-items-center justify-content-between flex-wrap gap-2 text-uppercase">
       <div class="d-flex align-items-center gap-2">
         <span class="glow-dot"></span>
@@ -31,7 +31,7 @@
         <span class="text-slate-200">Clock (UTC): <span id="utc-clock-tracker">2026-06-05 05:32:50 UTC</span></span>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- --- APP HEADER --- -->
   <header id="main-app-header" class="fixed-top bg-white d-flex align-items-center z-50">
@@ -76,9 +76,12 @@
         <div id="hero-left-content" class="col-12 col-lg-6 space-y-4 pe-lg-5">
 
           <!-- Premium Qualification Strip Tag -->
-          <div id="qualification-strip-top" class="d-inline-flex align-items-center gap-2 px-3 py-2 border border-white rounded-pill shadow-sm mb-4 flex-wrap justify-content-center" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(240,249,255,0.8)); backdrop-filter: blur(10px); max-width: 100%;">
+          <div id="qualification-strip-top"
+            class="d-inline-flex align-items-center gap-2 px-3 py-2 border border-white rounded-pill shadow-sm mb-4 flex-wrap justify-content-center"
+            style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(240,249,255,0.8)); backdrop-filter: blur(10px); max-width: 100%;">
             <span class="glow-dot flex-shrink-0"></span>
-            <span class="text-uppercase fw-bold text-primary-base text-center" style="font-size: 10px; letter-spacing: 0.05em;">
+            <span class="text-uppercase fw-bold text-primary-base text-center"
+              style="font-size: 10px; letter-spacing: 0.05em;">
               Schools • Colleges • Universities • EdTech
             </span>
           </div>
@@ -87,9 +90,12 @@
           <div class="mb-5">
             <h1 id="hero-main-title" class="display-4 fw-extrabold text-slate-900 leading-tight mb-4"
               style="font-family: var(--font-heading); font-weight: 850; letter-spacing: -0.02em;">
-              Increase Student Enrolments with <br/><span class="text-primary-base" style="background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intelligent Admission Automation</span>
+              Increase Student Enrolments with <br /><span class="text-primary-base"
+                style="background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intelligent
+                Admission Automation</span>
             </h1>
-            <p id="hero-sub-title" class="lead text-slate-600 fw-normal" style="font-size: 19px; line-height: 1.7; max-width: 100%;">
+            <p id="hero-sub-title" class="lead text-slate-600 fw-normal"
+              style="font-size: 19px; line-height: 1.7; max-width: 100%;">
               Capture, nurture, and convert admission enquiries faster using automated engagement workflows and
               real-time lead tracking designed for educational institutions.
             </p>
@@ -101,20 +107,25 @@
               class="btn rounded-pill py-3 px-4 text-white fw-bold d-flex align-items-center gap-2"
               style="background: linear-gradient(135deg, var(--color-primary) 0%, #2563EB 100%); box-shadow: 0 10px 25px rgba(29, 78, 216, 0.3); border: none; transition: transform 0.3s ease, box-shadow 0.3s ease;"
               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 15px 35px rgba(29, 78, 216, 0.4)'"
-              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(29, 78, 216, 0.3)'"
-            >
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(29, 78, 216, 0.3)'">
               <span style="font-size: 15px;">Book Growth Consultation</span>
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </button>
-            
+
             <!-- Social Proof Avatars -->
             <div class="d-flex align-items-center gap-2">
               <div class="d-flex" style="margin-right: 5px;">
-                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=A+S&background=E0E7FF&color=3730A3" alt="User">
-                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=M+D&background=DBEAFE&color=1E40AF" alt="User">
-                <img class="rounded-circle border border-2 border-white" style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="https://ui-avatars.com/api/?name=P+K&background=FEF3C7&color=B45309" alt="User">
+                <img class="rounded-circle border border-2 border-white"
+                  style="width: 36px; height: 36px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+                  src="https://ui-avatars.com/api/?name=A+S&background=E0E7FF&color=3730A3" alt="User">
+                <img class="rounded-circle border border-2 border-white"
+                  style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+                  src="https://ui-avatars.com/api/?name=M+D&background=DBEAFE&color=1E40AF" alt="User">
+                <img class="rounded-circle border border-2 border-white"
+                  style="width: 36px; height: 36px; object-fit: cover; margin-left: -12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+                  src="https://ui-avatars.com/api/?name=P+K&background=FEF3C7&color=B45309" alt="User">
               </div>
               <div class="text-start ms-1">
                 <div class="d-flex text-warning" style="font-size: 12px;">
@@ -128,20 +139,28 @@
           <!-- Subtle Mini Stat Strip -->
           <div id="hero-status-strip" class="row border-top border-slate-200 mt-5 pt-4 g-4 text-start">
             <div class="col-12 col-sm-4 position-relative">
-              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">98.4%</div>
+              <div class="fw-extrabold text-slate-900"
+                style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">98.4%</div>
               <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
                 Response Speed</div>
-              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block"
+                style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);">
+              </div>
             </div>
             <div class="col-12 col-sm-4 position-relative">
-              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Instant</div>
+              <div class="fw-extrabold text-slate-900"
+                style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Instant</div>
               <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
                 WhatsApp Nurture</div>
-              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block" style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);"></div>
+              <div class="position-absolute top-50 end-0 translate-middle-y d-none d-sm-block"
+                style="width: 1px; height: 50px; background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);">
+              </div>
             </div>
             <div class="col-12 col-sm-4">
-              <div class="fw-extrabold text-slate-900" style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Unified</div>
-              <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">Ad
+              <div class="fw-extrabold text-slate-900"
+                style="font-family: var(--font-heading); font-size: 28px; line-height: 1.2;">Unified</div>
+              <div class="text-uppercase text-slate-500 fw-bold mt-1" style="font-size: 10px; letter-spacing: 0.05em;">
+                Ad
                 Conversion</div>
             </div>
           </div>
@@ -149,7 +168,9 @@
         </div>
 
         <!-- Right Graphical Illustration Frame -->
-        <div id="hero-right-visuals" class="col-12 col-lg-6 position-relative d-flex justify-content-center floating-gently" style="animation-duration: 8s;">
+        <div id="hero-right-visuals"
+          class="col-12 col-lg-6 position-relative d-flex justify-content-center floating-gently"
+          style="animation-duration: 8s;">
 
           <div class="premium-image-wrapper">
             <!-- Background Shape -->
@@ -173,7 +194,8 @@
           </div>
 
           <!-- Floating Micro Notification widget -->
-          <div class="position-absolute top-10 start-0 transform -rotate-1 z-30 d-none d-sm-block floating-gently" style="animation-delay: 0s;">
+          <div class="position-absolute top-10 start-0 transform -rotate-1 z-30 d-none d-sm-block floating-gently"
+            style="animation-delay: 0s;">
             <div id="floating-notification-widget">
               <div id="float-icon-box" class="p-2 rounded-full bg-blue-50">
                 <svg class="w-4 h-4 text-primary-base" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,7 +215,8 @@
           </div>
 
           <!-- Absolute Bottom Corner Floating Accredit block -->
-          <div class="position-absolute bottom-10 end-0 transform rotate-2 z-30 d-none d-sm-block floating-gently" style="animation-delay: 1.5s;">
+          <div class="position-absolute bottom-10 end-0 transform rotate-2 z-30 d-none d-sm-block floating-gently"
+            style="animation-delay: 1.5s;">
             <div class="bg-white border p-3 rounded-4 shadow-lg d-flex align-items-center gap-3"
               style="max-width: 250px;">
               <div class="bg-amber-100 rounded-3 p-2 text-warning d-flex align-items-center justify-content-center">
@@ -346,8 +369,7 @@
   </section>
 
   <!-- --- SECTION 2: OUTCOME SECTION (CONTENT LEFT, IMAGE RIGHT) --- -->
-  <section id="outcomes-section" class="py-5 bg-light-subtle"
-    style="background-color: #FAFAFA;">
+  <section id="outcomes-section" class="py-5 bg-light-subtle" style="background-color: #FAFAFA;">
     <div class="container-xl py-5">
       <div class="row align-items-center g-5">
 
@@ -492,8 +514,7 @@
           <div class="premium-image-wrapper">
             <div class="premium-image-backing variant-4-backing"></div>
             <div class="premium-image-viewport variant-4-viewport">
-              <img id="differentiator-collaged-image"
-                src="assets/images/hero/student.png"
+              <img id="differentiator-collaged-image" src="assets/images/hero/student.png"
                 alt="Indian parents discussing academic counselling options" referrerpolicy="no-referrer">
               <div class="position-absolute bottom-0 start-0 end-0 p-4"
                 style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
@@ -1071,21 +1092,23 @@
             </div>
             <p class="text-slate-750 fst-italic leading-relaxed mb-4 relative-z"
               style="font-size: 14.5px; z-index: 10;">
-              Plumb5 transformed our enrolment journey. Enquiries that used to take days to follow up are now engaged on
-              WhatsApp within seconds.
+              I have been extremely impressed with Plumb5’s email campaign services. The system is well- structured and
+              easy to navigate, making campaign execution efficient and hassle-free. The support team is responsive, and
+              it’s been a pleasure working with Unnatii—always prompt, proactive, and dependable. From seamless database
+              integration to delivering measurable engagement, Plumb5 has truly elevated our communication efforts.
+              Highly recommended!
             </p>
             <hr class="border-light opacity-50 mb-3">
             <div class="d-flex align-items-center gap-3">
               <div
                 class="bg-success bg-opacity-10 text-primary-base rounded-circle d-flex align-items-center justify-content-center fw-bold text-uppercase"
                 style="width: 44px; height: 44px;">
-                S
+                A
               </div>
               <div>
-                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Dr. Alok Sen</h5>
-                <p class="text-slate-400 m-0" style="font-size: 11px;">Director of Admissions</p>
-                <p class="text-uppercase text-primary-base font-monospace fw-bold m-0"
-                  style="font-size: 9.5px; tracking: 0.05em;">Vanguard International Institute</p>
+                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Ms.Anika Dhawan</h5>
+                <p class="text-slate-400 m-0" style="font-size: 12px;">Skcool Of Code, USA</p>
+              
               </div>
             </div>
           </div>
@@ -1099,21 +1122,24 @@
             </div>
             <p class="text-slate-750 fst-italic leading-relaxed mb-4 relative-z"
               style="font-size: 14.5px; z-index: 10;">
-              Counsellor productivity saw a massive jump. We can now prioritize leads based on actual engagement scoring
-              and real-time interest.
+              Plumb5 is an excellent marketing automation platform with in-built CRM, which made us understand our
+              customers in-depth behavioural aspects and real-time engagements during their website visits. It gives us
+              precise info to target potential customers and increases our admissions conversion rates.
+
+              The readiness to understand customer business, response and cooperation during the process is excellent
+              and seamless for the executives at Plumb5.
             </p>
             <hr class="border-light opacity-50 mb-3">
             <div class="d-flex align-items-center gap-3">
               <div
                 class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center fw-bold text-uppercase"
                 style="width: 44px; height: 44px;">
-                D
+                N
               </div>
               <div>
-                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Meera Deshmukh</h5>
-                <p class="text-slate-400 m-0" style="font-size: 11px;">Registrar</p>
-                <p class="text-uppercase text-primary-base font-monospace fw-bold m-0"
-                  style="font-size: 9.5px; tracking: 0.05em;">St. Xavier's Academy of Higher Education</p>
+                <h5 class="fw-bold text-dark m-0" style="font-size: 13.5px;">Mr. D Narayana Murthy</h5>
+                <p class="text-slate-400 m-0" style="font-size: 12px;">Founder President, Ananyaa International School,</p>
+               
               </div>
             </div>
           </div>
@@ -1239,7 +1265,7 @@
                 <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">First &amp;
                   Last Name</label>
                 <div class="position-relative">
-                  <input id="input-fullname" type="text" name="fullName" placeholder="e.g. Anand Sharma"
+                  <input id="input-fullname" type="text" name="fullName" placeholder=""
                     class="form-control rounded-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
                 </div>
                 <p id="error-fullname" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
@@ -1250,7 +1276,7 @@
                 <label class="text-uppercase text-slate-500 fw-bold d-block mb-1.5" style="font-size: 10px;">Academic or
                   Work Email</label>
                 <div class="position-relative">
-                  <input id="input-email" type="email" name="email" placeholder="e.g. principal@institution.edu"
+                  <input id="input-email" type="email" name="email" placeholder=""
                     class="form-control rounded-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
                 </div>
                 <p id="error-email" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
@@ -1262,7 +1288,7 @@
                   Mobile Number</label>
                 <div class="input-group">
                   <span class="input-group-text bg-light" style="font-size: 13px; font-weight: bold;">+91</span>
-                  <input id="input-phone" type="tel" name="phone" placeholder="98765 43210"
+                  <input id="input-phone" type="tel" name="phone" placeholder=""
                     class="form-control rounded-end-3 py-2.5 px-3 bg-light border" style="font-size: 13.5px;">
                 </div>
                 <p id="error-phone" class="text-danger fw-bold m-0 mt-1 d-none" style="font-size: 11.5px;"></p>
@@ -1424,7 +1450,8 @@
       <div class="max-w-2xl mx-auto mb-4">
         <!-- Wordmark -->
         <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
-          <img src="assets/images/brand/logo.png" alt="Plumb5" class="img-fluid" style="height: 48px; width: auto; filter: brightness(0) invert(1);">
+          <img src="assets/images/brand/logo.png" alt="Plumb5" class="img-fluid"
+            style="height: 48px; width: auto; filter: brightness(0) invert(1);">
         </div>
 
         <h3 class="fw-light text-slate-300 fs-4 mb-4" style="line-height: 1.55;">

@@ -1090,20 +1090,85 @@ rgba(37,99,235,.85) 100%
 
 /* -- Global Mobile Responsive Fixes -- */
 @media (max-width: 767px) {
-  /* Hero title adjustment */
-  #hero-main-title {
-    font-size: 2.25rem !important;
+  /* Global Layout & Padding */
+  body {
+    overflow-x: hidden;
   }
-  /* Hero sub title */
-  #hero-sub-title {
-    font-size: 15px !important;
-    max-width: 100% !important;
+  
+  .container-xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
-  /* Hero padding */
+
+  section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Header Section Adjustments */
+  #main-app-header {
+    padding: 0.5rem 0 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .header-logo-wrapper img {
+    height: 36px !important; /* Smaller logo for mobile */
+  }
+
+  /* Header CTA Button */
+  #header-cta-button {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 12px !important;
+    gap: 0.25rem !important;
+  }
+
+  #header-cta-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Hero Section */
   #hero-section .container-xl {
-    padding-top: 60px !important;
+    padding-top: 80px !important;
     padding-bottom: 40px !important;
   }
+
+  #hero-main-title {
+    font-size: 2.2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  #hero-sub-title {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  #hero-cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem !important;
+  }
+
+  #hero-cta-action {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+  }
+
+  #hero-status-strip {
+    text-align: center !important;
+    margin-top: 2rem !important;
+    padding-top: 1.5rem !important;
+  }
+
+  #hero-status-strip .col-12 {
+    margin-bottom: 1rem;
+  }
+  
+  #hero-status-strip .col-12:last-child {
+    margin-bottom: 0;
+  }
+
   /* Platform showcase section */
   #platform-software-showcase {
     margin: 1.5rem 0.5rem !important;
@@ -1111,48 +1176,61 @@ rgba(37,99,235,.85) 100%
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
-  /* Header CTA button text reduction */
-  #header-cta-button {
-    padding: 0.5rem 1rem !important;
-    font-size: 13px !important;
-  }
-  /* Ensure images don't overflow */
+
+  /* Images & Mockups */
   .premium-image-wrapper {
     max-width: 100% !important;
+    margin: 0 auto;
   }
-  /* Adjust laptop mockup base for mobile */
+
   .laptop-base-aluminium > div {
     width: 50px !important;
   }
+
   .laptop-screen-bezel {
     padding: 8px !important;
     border-radius: 1rem 1rem 0 0 !important;
   }
-  /* Ticker bar font size */
-  #campaign-ticker-bar {
-    font-size: 9px !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+
+  .floating-gently {
+    transform: scale(0.8);
   }
-  /* Ensure timeline cards have decent padding */
-  .timeline-card {
-    padding: 1.25rem !important;
+  
+  #floating-notification-widget {
+    padding: 0.5rem !important;
+    gap: 0.5rem !important;
   }
 }
 
 @media (max-width: 480px) {
   /* Fix 3 column stats overlapping on very small screens */
   #hero-status-strip .fw-extrabold {
-    font-size: 18px !important;
+    font-size: 24px !important;
   }
   #hero-status-strip .text-uppercase {
-    font-size: 8px !important;
+    font-size: 10px !important;
   }
-  /* Make header button text completely disappear to save space on tiny screens */
-  #header-cta-button span {
-    display: none !important;
+  
+  /* Text adjustments on tiny screens */
+  #hero-main-title {
+    font-size: 1.8rem !important;
+  }
+  
+  #header-cta-button span.d-sm-inline {
+    display: none !important; /* Hide "Book Consultation" text to save space */
+  }
+  #header-cta-button {
+    border-radius: 50% !important;
+    width: 36px;
+    height: 36px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #header-cta-button svg {
     margin: 0 !important;
+    width: 16px;
+    height: 16px;
   }
 }
