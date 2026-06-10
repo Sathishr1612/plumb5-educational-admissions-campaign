@@ -262,7 +262,7 @@ filter:blur(150px);
 
 .variant-2-backing {
   border-radius: 2rem 4rem 2rem 4rem;
-  background-color: rgba(14, 165, 233, 0.12);
+  background-color: rgba(99, 102, 241, 0.12);
   transform: translate(-16px, 16px);
 }
 
